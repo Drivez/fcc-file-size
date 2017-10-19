@@ -6,21 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>File-Size Microservice</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body style="display: flex; justify-content:center">
+<body>
+    <div id="gradient">
 
-        <div class="card" style="width: 20rem; margin-top: 5em;">
+        <div class="card">
                 <div class="card-body">
-                  <h4 class="card-title">Analyze File</h4>
+                  <h4 class="card-title" id="headline">Analyze File</h4>
                   <h6 class="card-subtitle mb-2 text-muted">Analyze any file by uploading it</h6>
                   <form action="/upload" method="POST" enctype="multipart/form-data">
                     <label for="file">Select a file to analyze!</label>
-                    <input type="file" id="file" name="file">
-                    <input type="submit">
+                    <div class="fileUpload btn btn-primary">
+                        <span>Select File</span>
+                        <input type="file" class="upload" />
+                    </div>
+                    <div class="fileSubmit btn btn-success">
+                        <span>Upload</span>
+                        <input type="submit" class="submit" />
+                    </div>
+                    
                 </form>
                 </div>
               </div>
-   
+   </div>
     
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="app.js"></script>
 </html>
